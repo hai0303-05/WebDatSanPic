@@ -369,7 +369,8 @@
         }
     });
 
-    // xóa sân
+    // xoa san
+    //tesst git 
     function confirmXoaSan(id, name) {
         document.getElementById('xoaMessage').innerHTML = `Xóa sân <strong>${name}</strong>?`;
         document.getElementById('btnXacNhanXoa').onclick = async () => {
