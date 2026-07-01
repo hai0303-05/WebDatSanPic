@@ -38,14 +38,14 @@ try {
         ]);
         exit;
     }
-
+ 
     // Thêm đơn đặt sân mới
     $insertSql = "INSERT INTO dat_san (khach_hang_id, san_id, khung_gio_id, ngay_dat, tien_san, tien_dich_vu, tong_hoa_don, trang_thai) 
                   VALUES (?, ?, ?, ?, ?, ?, ?, 'cho_xac_nhan')";
     $insertStmt = $conn->prepare($insertSql);
     $insertStmt->bind_param("iiisddd", $userId, $sanId, $khungGioId, $ngayDat, $tienSan, $tienDichVu, $tongHoaDon);
     if ($insertStmt->execute()) {
-        $datSanId = $insertStmt->insert_id;
+        $datSanId = $insertStmt       ->         insert_id;
         // Thêm chi tiết dịch vụ nếu có
         if (!empty($dichVu)) {
             $dvInsertSql = "INSERT INTO chi_tiet_dich_vu (dat_san_id, dich_vu_id, so_luong, thanh_tien) VALUES (?, ?, ?, ?)";

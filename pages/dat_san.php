@@ -99,7 +99,7 @@
 
         if (!bookingData.san_id || !bookingData.khung_gio_id || !bookingData.ngay_dat) {
             showToast('Thông tin đặt sân không hợp lệ!', false);
-            setTimeout(() => { window.location.href = '../index.php'; }, 1200);
+            setTimeout(() =>      { window.location.href = '../index.php'; }, 1200);
             return;
         }
 
@@ -182,7 +182,7 @@
             const btn = this;
             btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang xử lý...';
-
+ 
             const dichVu = [];
             document.querySelectorAll('.dv-cb:checked').forEach(cb => {
                 const qty = Number(document.getElementById('qty-' + cb.dataset.id).textContent);
@@ -223,7 +223,7 @@
                 btn.innerHTML = '<i class="fas fa-check-circle"></i> Xác Nhận Đặt Sân';
             });
         });
-
+ 
         document.getElementById('cancelBtn').addEventListener('click', () => window.history.back());
     })();
     </script>
