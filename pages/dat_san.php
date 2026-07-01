@@ -20,7 +20,7 @@
         </header>
     </div>
 
-    
+
     <div class="booking-page">
         <div class="booking-left">
             <div class="section-card">
@@ -92,8 +92,9 @@
             time: params.get('time'),
             price: Number(params.get('price')),
             co_so: params.get('co_so'),
-            khu_vuc: params.get('khu_vuc'),
             san: params.get('san')
+            khu_vuc: params.get('khu_vuc'),
+
         };
 
         if (!bookingData.san_id || !bookingData.khung_gio_id || !bookingData.ngay_dat) {
