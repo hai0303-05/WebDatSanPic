@@ -20,6 +20,7 @@
         </header>
     </div>
 
+    
     <div class="booking-page">
         <div class="booking-left">
             <div class="section-card">
