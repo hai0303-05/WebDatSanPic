@@ -183,7 +183,7 @@
                 if (urlCoSoId && css.some(cs => cs.co_so_id == urlCoSoId)) {
                     targetCsId = urlCoSoId;
                 }
-
+//sua file nhe
                 renderFacilityTabs(css, targetCsId);
                 loadFacilityInfo(targetCsId);
                 loadArea(targetCsId);
@@ -544,4 +544,4 @@
     </script>
 </body>
 
-</html>
+</html><!-- TEST CHANGE -->
