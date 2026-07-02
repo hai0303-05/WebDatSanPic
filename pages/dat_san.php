@@ -96,13 +96,13 @@
             khu_vuc: params.get('khu_vuc'),
 
         };
-
+// ok
         if (!bookingData.san_id || !bookingData.khung_gio_id || !bookingData.ngay_dat) {
             showToast('Thông tin đặt sân không hợp lệ!', false);
             setTimeout(() =>      { window.location.href = '../index.php'; }, 1200);
             return;
         }
-
+// 1234
         // Render thông tin đặt sân
         document.getElementById('bookingInfo').innerHTML = `
             <div class="info-item"><i class="fas fa-building"></i><div><small>Cơ sở</small><strong>${bookingData.co_so}</strong></div></div>

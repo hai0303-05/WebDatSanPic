@@ -13,7 +13,7 @@ try {
     $tienDichVu = 0;
     foreach ($dichVu as $dv){
         $tienDichVu += $dv['thanh_tien'] ?? 0;
-    }
+    } // 1234
     $tongHoaDon = $tienSan + $tienDichVu;
 
     if (!$userId || !$sanId || !$khungGioId || !$ngayDat || !$tienSan) {
@@ -24,7 +24,7 @@ try {
         exit;
     }
 
-    // Kiểm tra xem sân đã được đặt vào khung giờ và ngày đó chưa
+    // Kiểm tra xem sân đã được đặt vào khung giờ và ngày đó chưa, ok
     $checkSql = "SELECT COUNT(*) FROM dat_san 
                  WHERE san_id = ? AND khung_gio_id = ? AND ngay_dat = ? AND trang_thai IN ('cho_xac_nhan', 'da_xac_nhan')";
     $checkStmt = $conn->prepare($checkSql);
